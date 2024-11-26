@@ -1,0 +1,13 @@
+{
+"url" : "http://49.249.28.218:8081/AppServer/Hospital_Doctor_Patient_Management_System/",
+"browser" : "chrome",
+"adminusername" : "admin",
+"adminpassword" : "Test@12345",
+"doctorusername" : "vasoolrajambbs@gmail.com",
+"doctorpassword" : "Doctor@123",
+"userusername" : "asha1234@gmail.com",
+"userpassword" : "asha1234",
+"admintitle" : "Admin-Login",
+"usertitle" : "User-Login",
+"doctortitle" : "Doctor Login"
+}

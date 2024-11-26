@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+<listener class-name="com.HMS.Generic.ListenerUtility.ListenerClassForHMS"></listener></listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Admin.AdminTest"/>
+      <class name="Doctor.DoctorTest"/>
+      <class name="User.UserTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
