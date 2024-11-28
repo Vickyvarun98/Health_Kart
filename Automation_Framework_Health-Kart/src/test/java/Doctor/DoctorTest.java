@@ -135,5 +135,30 @@ public class DoctorTest extends BaseClassForHMS {
 		wu.mouseHover(driver, a_home.getLogOut());
 		a_home.logout();
 	}
+	@Test
+	public void createPatient() throws IOException {
+		
+		String DUSERNAME = file.getDataFromPropFile("doctorusername");
+		String DPASSWORD = file.getDataFromPropFile("doctorpassword");
+		String DTITLE = file.getDataFromPropFile("doctortitle");
+		String PNAME = Excel.getDataFromExcelFile("PATIENT", 1, 0);		
+		String PMAIL =j.generateRandomNumber(9999) +Excel.getDataFromExcelFile("PATIENT", 1, 1);
+		String PLOCATION = Excel.getDataFromExcelFile("PATIENT", 0, 2);
+		String PMOBILE = j.generateRandomNumber(999999999)+"1";
+		String P_AGE = j.generateRandomNumber(50)+"";
+		HomePageTest hp=new HomePageTest(driver);
+		hp.login();
+		wu.switchToBrowserByTitle(driver, DTITLE);
+		hp.doctorLogin();
+		DoctorLoginPageTest d_login=new DoctorLoginPageTest(driver);
+		d_login.doctorLogin(DUSERNAME, DPASSWORD);
+		DoctorHomePage d_home=new DoctorHomePage(driver);
+		d_home.createPatient(PNAME, PMOBILE, PMAIL,"MALE", PLOCATION, P_AGE, "NIL");
+		
+		
+		
+		
+		
+	}
 	
 }

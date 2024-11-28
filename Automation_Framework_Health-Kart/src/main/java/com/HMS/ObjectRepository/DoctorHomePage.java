@@ -140,20 +140,23 @@ public class DoctorHomePage {
 		wu.scrollToElement(driver, CancelAppointment);
 		CancelAppointment.click();	
 	}
+	
 	public void logout() {
 		DoctorDropdown.click();
 		LogOut.click();
 	}
+	
 	public void cancelAppointment(WebDriver driver) {
 		AppointmentHistory.click();
 		wu.clicktoElement(driver, CancelAppointment);
 	}
 	
-	public void createPatient(String PName,String Pcontact,String Gender,String Address,String Age,String MHistory) {
+	public void createPatient(String PName,String Pcontact,String Pmail,String Gender,String Address,String Age,String MHistory) {
 		Patients.click();
 		AddPatient.click();
 		PatientName.sendKeys(PName);
 		PatientContact.sendKeys(Pcontact);
+		Patientmail.sendKeys(Pmail);
 		if (Malebtn.getText().equalsIgnoreCase(Gender)) {
 			Malebtn.click();
 		} else {
